@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="/static/css/home.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header class="header">
+
+
+        <a href="{{ url_for('userlogin')}}" class="logo"> <span>Namma</span>Vehicles</a>
+
+        <nav class="navbar">
+            <Ul>
+                <Li><a href="{{ url_for('userlogin')}}">home</a></Li>
+                <Li><a href="{{ url_for('vehicles')}}">vehicles</a></Li>
+                <Li><a href="{{ url_for('featured')}}">featured</a></Li>
+                <Li><a href="{{ url_for('services')}}">services</a></Li>
+                <Li><a href="{{ url_for('reviews')}}">reviews</a></Li>
+                <Li><a href="{{ url_for('aboutus')}}">about</a></Li>
+                <Li><a href="{{ url_for('contact')}}">contact</a></Li>
+                <Li><a href="{{ url_for('checkout_json_data')}}">Bookings</a></Li>
+            </Ul>
+        </nav>
+        <div id="logout-btn">
+            <a href="{{ url_for('logout')}}">
+                <button id="logout" class="btn">logout</button></a>
+            <i class="far fa-user"></i>
+        </div>
+        <div class="right">
+            <img src="/static/img/profile.png" alt="">
+            <div>
+                <h3>{{logged_in_user}}</h3>
+            </div>
+        </div>
+    </header>
+    <section class="reviews" id="reviews">
+
+        <div class="swiper review-slider">
+            <h1 class="heading"> Customer <span>review</span> </h1>
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic1.png" alt="">
+                    <div class="content">
+                        <p>Overall it was a good experience.</p>
+                        <h3>scorpio</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic2.png" alt="">
+                    <div class="content">
+                        <p>I had a very nice experience would like to recommend to all the users.</p>
+                        <h3>Baby corn</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic3.png" alt="">
+                    <div class="content">
+                        <p>Nice experience.</p>
+                        <h3>Levi</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic4.png" alt="">
+                    <div class="content">
+                        <p>Good experience.</p>
+                        <h3>Gingu</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic5.png" alt="">
+                    <div class="content">
+                        <p>Very good experience, will expect the same services in future.</p>
+                        <h3>Aurora</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic6.png" alt="">
+                    <div class="content">
+                        <p>.</p>
+                        <h3>Aora</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic7.png" alt="">
+                    <div class="content">
+                        <p>.</p>
+                        <h3>Darling</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic8.png" alt="">
+                    <div class="content">
+                        <p>.</p>
+                        <h3>Teddy Bear</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic9.png" alt="">
+                    <div class="content">
+                        <p>.</p>
+                        <h3>Ravi</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic10.png" alt="">
+                    <div class="content">
+                        <p>.</p>
+                        <h3>Rangila</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+    <section class="reviews" id="reviews">
+
+        <div class="swiper review-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic1.png" alt="">
+                    <div class="content">
+                        <p>.</p>
+                        <h3>kiDO</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic2.png" alt="">
+                    <div class="content">
+                        <p>Overall experience was great.They have variance of car to choose. Great Self-Drive Cars with
+                            reasonable prices. I drove myself and was very much satisfied . I really appreciate and love
+                            their service. </p>
+                        <h3>Event Master</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic3.png" alt="">
+                    <div class="content">
+                        <p>Nice car services. This is my second time renting the car from "Namma Vehicles" they have
+                            wide varities of car, they provide pleasant and promising services. I wish to receive the
+                            same services.</p>
+                        <h3>Poori</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic4.png" alt="">
+                    <div class="content">
+                        <p>.</p>
+                        <h3>poo</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic5.png" alt="">
+                    <div class="content">
+                        <p>It was amazing using this website, as it was very useful and easy to use..</p>
+                        <h3>Magu</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic6.png" alt="">
+                    <div class="content">
+                        <p>.</p>
+                        <h3>Aura</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic7.png" alt="">
+                    <div class="content">
+                        <p>.</p>
+                        <h3>Darling</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic8.png" alt="">
+                    <div class="content">
+                        <p>.</p>
+                        <h3>Teddy Bear</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic9.png" alt="">
+                    <div class="content">
+                        <p>.</p>
+                        <h3>Ravi</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide box">
+                    <img src="/static/img/pic10.png" alt="">
+                    <div class="content">
+                        <p>.</p>
+                        <h3>Rangila 123</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+    <section class="footer" id="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>our location</h3>
+                <a href="{{params['mysore_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Mysore Road
+                </a>
+                <a href="{{params['Koramangala_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i>
+                    Koramangala </a>
+                <a href="{{params['Yeswanthpur_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i>
+                    Yeswanthpur </a>
+                <a href="{{params['Kalasipalya_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i>
+                    Kalasipalya </a>
+                <a href="{{params['Majestic_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Majestic
+                </a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="{{ url_for('userlogin')}}"> <i class="fas fa-arrow-right"></i> home </a>
+                <a href="{{ url_for('vehicles')}}"> <i class="fas fa-arrow-right"></i> vehicles </a>
+                <a href="{{ url_for('featured')}}"> <i class="fas fa-arrow-right"></i> featured </a>
+                <a href="{{ url_for('services')}}"> <i class="fas fa-arrow-right"></i> services </a>
+                <a href="{{ url_for('reviews')}}"> <i class="fas fa-arrow-right"></i> reviews </a>
+                <a href="{{ url_for('aboutus')}}"> <i class="fas fa-arrow-right"></i>About </a>
+                <a href="{{ url_for('contact')}}"> <i class="fas fa-arrow-right"></i> contact </a>
+                <a href="{{ url_for('checkout_json_data')}}"> <i class="fas fa-arrow-right"></i>Bookings </a>
+            </div>
+
+            <div class="box">
+                <h3>Customer Support</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +85490-84770 </a>
+                <a href="#"> <i class="fas fa-phone"></i> +96202-11275 </a>
+                <a href="mailto:Nammavehicles@gmail.com"> <i class="fas fa-envelope"></i> Nammavehicles@gmail.com </a>
+                <a href="{{params['Bangalore_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Bangalore india - 560040 </a>
+            </div>
+
+            <div class="box">
+                <h3>Explore Us</h3>
+                <a href="{{params['fb_url']}}" target="_blank"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="{{params['tw_url']}}" target="_blank"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="{{params['in_url']}}" target="_blank"> <i class="fab fa-instagram"></i> instagram </a>
+            </div>
+
+        </div>
+
+        <div class="credit"> created by Nithin and Akanksha </div>
+
+    </section>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script>var swiper = new Swiper(".review-slider", {
+            grabCursor: true,
+            centeredSlides: true,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 9500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });</script>
+</body>
+
+</html>

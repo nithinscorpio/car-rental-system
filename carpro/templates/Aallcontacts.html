@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vehicles</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="/static/css/home.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header class="header">
+
+
+        <a href="{{ url_for('Aallcheck')}}" class="logo"> <span>Namma</span>Vehicles</a>
+
+        <nav class="navbar">
+            <Ul>
+                <Li><a href="{{ url_for('all_checkout_json_data')}}">checkoutdata </a></Li>
+                <Li><a href="{{ url_for('all_contacts_json_data')}}">contacts</a></Li>
+                <Li><a href="{{ url_for('all_register_json_data')}}">register</a></Li>
+                <Li><a href="{{ url_for('all_subscribe_json_data')}}">subscribe</a></Li>
+        </nav>
+        <div id="logout-btn">
+            <a href="{{ url_for('adminlogout')}}">
+                <button id="logout" class="btn">logout</button></a>
+            <i class="far fa-user"></i>
+        </div>
+    </header>
+
+
+
+    
+    <section class="Aallcheck" id="Aallcheck">
+        
+        <table>
+            <div>
+                <h1 class="heading"> <span>Contacts</span></h1>
+            </div>
+        <tr>
+            <th>sno</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>Message</th>
+            <th>date</th>
+            <th>action</th>
+        </tr>
+        {% for data in checkout %}
+        <tr>
+            <td>
+                {{data[0]}}
+            </td>
+            <td>
+                {{data[1]}}
+            </td>
+            <td>
+                {{data[2]}}
+            </td>
+            <td>
+                {{data[3]}}
+            </td>
+            <td>
+                {{data[4]}}
+            </td>
+            <td>
+                {{data[5]}}
+            </td>
+            <td>
+                <a href="/all_contact_delete/{{data[0]}}">
+                    <button class="btn">Delete</button>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div id="print-btn">
+        <a href="{{ url_for('printAallcontacts')}}">
+            <button id="print" class="btn">print</button></a>
+    </div>
+</section>
+    
+    
+
+   
+    <section class="footer" id="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>our location</h3>
+                <a href="{{params['mysore_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Mysore Road
+                </a>
+                <a href="{{params['Koramangala_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i>
+                    Koramangala </a>
+                <a href="{{params['Yeswanthpur_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i>
+                    Yeswanthpur </a>
+                <a href="{{params['Kalasipalya_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i>
+                    Kalasipalya </a>
+                <a href="{{params['Majestic_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Majestic
+                </a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="{{ url_for('Aallcheck')}}"> <i class="fas fa-arrow-right"></i> checkoutdata </a>
+                <a href="{{ url_for('Aallcontacts')}}"> <i class="fas fa-arrow-right"></i> contacts </a>
+                <a href="{{ url_for('Aallregister')}}"> <i class="fas fa-arrow-right"></i> register </a>
+                <a href="{{ url_for('Aallsubscribe')}}"> <i class="fas fa-arrow-right"></i> subscribe </a>
+            </div>
+
+
+            <div class="box">
+                <h3>Social Media</h3>
+                <a href="{{params['fb_url']}}" target="_blank"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="{{params['tw_url']}}" target="_blank"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="{{params['in_url']}}" target="_blank"> <i class="fab fa-instagram"></i> instagram </a>
+            </div>
+
+        </div>
+
+        <div class="credit"> created by Nithin and Akanksha </div>
+
+    </section>
+</body>
+
+</html>

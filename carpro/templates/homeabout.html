@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="/static/css/home.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header class="header">
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <a href="{{ url_for('home')}}" class="logo"> <span>Namma</span>Vehicles</a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ url_for('admin')}}">Admin</a></li>
+                <li> <a href="{{ url_for('home')}}">home</a></li>
+                <li> <a href="{{ url_for('homecontact')}}">contact</a></li>
+                <li> <a href="{{ url_for('homeabout')}}">about</a></li>
+            </ul>
+        </nav>
+        <div id="login-btn">
+            <a href="{{ url_for('login')}}">
+                <button id="login" class="btn">login</button></a>
+            <i class="far fa-user"></i>
+        </div>
+        <div id="register-btn">
+            <a href="{{ url_for('register')}}">
+                <button id="register" class="btn">Register</button></a>
+            <i class="far fa-user"></i>
+        </div>
+        </header>
+    </section>
+    <div class="heading" style="background:url(/static/img/header-bg-1.png) no-repeat">
+        <h1>about us</h1>
+     </div>
+     <section class="about">
+
+        <div class="image">
+           <img src="/static/img/about-img.png" alt="">
+        </div>
+     
+        <div class="content">
+           <h3><span>Namma</span>Vehicles</h3>
+           <p>‘Namma Vehicles’ is designed to provide renting of cars through an online source. It has a very friendly interface which helps the user to check for cars available and rent them for the time specified. Costumers can contact us for any information needed about the cars at anytime through our social media handles or can email us.</p>
+           <p>We assure about the costumers satisfaction. As our company provides with the services mentioned, the costumers feel easy to use. Our company has many new model and featured cars and also many happy costumers. We provide the cars required to our costumers at very affordable price.</p>
+           <div class="icons-container">
+              <div class="icons">
+                 <i class="fas fa-hand-holding-usd"></i>
+                 <span>affordable price</span>
+              </div>
+              <div class="icons">
+                 <i class="fas fa-headset"></i>
+                 <span>24/7 guide service</span>
+              </div>
+           </div>
+        </div>
+     
+     </section>
+     <section class="footer" id="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>our location</h3>
+                <a href="{{params['mysore_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Mysore Road </a>
+                <a href="{{params['Koramangala_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Koramangala </a>
+                <a href="{{params['Yeswanthpur_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Yeswanthpur </a>
+                <a href="{{params['Kalasipalya_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Kalasipalya </a>
+                <a href="{{params['Majestic_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Majestic </a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="{{ url_for('home')}}"> <i class="fas fa-arrow-right"></i> home </a>
+                <a href="{{ url_for('homecontact')}}"> <i class="fas fa-arrow-right"></i> contact </a>
+                <a href="{{ url_for('homeabout')}}"> <i class="fas fa-arrow-right"></i> About</a>
+            </div>
+
+            <div class="box">
+                <h3>Customer Support</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +85490-84770 </a>
+                <a href="#"> <i class="fas fa-phone"></i> +96202-11275 </a>
+                <a href="mailto:Nammavehicles@gmail.com"> <i class="fas fa-envelope"></i> Nammavehicles@gmail.com </a>
+                <a href="{{params['Bangalore_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Bangalore india - 560040 </a>
+            </div>
+
+            <div class="box">
+                <h3>Explore Us</h3>
+                <a href="{{params['fb_url']}}" target="_blank"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="{{params['tw_url']}}" target="_blank"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="{{params['in_url']}}" target="_blank"> <i class="fab fa-instagram"></i> instagram </a>
+            </div>
+
+        </div>
+
+        <div class="credit"> created by Nithin and Akanksha </div>
+
+    </section>
+</body>

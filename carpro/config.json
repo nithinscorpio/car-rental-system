@@ -1,0 +1,16 @@
+{
+    "params":
+    {
+        "local_server": "True ",
+        "local_uri" : "mysql://Nithin:NITHIN1141121@localhost/user",
+        "fb_url":"",
+        "mysore_url":"https://www.google.com/maps/place/Mysore+Road+Bus+Stand/@12.9532635,77.5412729,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae3f005bba7115:0xdbd7f2e00ddaf1ab!8m2!3d12.9532583!4d77.5434616",
+        "Koramangala_url":"https://www.google.com/maps/place/Koramangala+Bus+Depot/@12.9409929,77.6211092,17z/data=!4m10!1m2!2m1!1sKoramangala+Bus+Stand!3m6!1s0x3bae1446ac423b9d:0xcb26477fcaa6199b!8m2!3d12.9409929!4d77.6252291!15sChVLb3JhbWFuZ2FsYSBCdXMgU3RhbmRaFyIVa29yYW1hbmdhbGEgYnVzIHN0YW5kkgEccHVibGljX3RyYW5zcG9ydGF0aW9uX3N5c3RlbZoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VSdGJYVlBTSHBuUlJBQuABAA!16s%2Fg%2F11b6hq8z9d",
+        "Yeswanthpur_url":"https://www.google.com/maps/place/Yeshwantpur+Bus+Stand/@13.0187346,77.5528859,17z/data=!4m10!1m2!2m1!1sYeswanthpur+Bus+Stand!3m6!1s0x3bae3d795b1c2b4b:0xadd226fcba2e80cc!8m2!3d13.0156698!4d77.5552556!15sChVZZXN3YW50aHB1ciBCdXMgU3RhbmSSAQhidXNfc3RvcOABAA!16s%2Fg%2F11bv6pcm9s",
+        "Kalasipalya_url":"https://www.google.com/maps/place/Kanakapura+Road+Bus+stand,+Kalasipalya/@12.9683021,77.5664369,15z/data=!4m10!1m2!2m1!1sKalasipalya+Bus+Stand!3m6!1s0x3bae1585c5b322b1:0x929ed247e61b5008!8m2!3d12.9592879!4d77.5766083!15sChVLYWxhc2lwYWx5YSBCdXMgU3RhbmSSARxkZXBhcnRtZW50X29mX3RyYW5zcG9ydGF0aW9u4AEA!16s%2Fg%2F11fq_78mh6",
+        "Bangalore_url": "https://www.google.com/maps/place/Surana+College+Peenya+Campus/@13.0211922,77.5261473,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae3d101aa3dd9b:0xad90aa0c15b255b6!8m2!3d13.021187!4d77.528336",
+        "Majestic_url":"https://www.google.com/maps/place/Majestic+Bus+Stand/@12.9683436,77.5664369,15z/data=!4m10!1m2!2m1!1sMajestic+Bus+Stand!3m6!1s0x3bae160fe714cc51:0x298961afe17a6cdc!8m2!3d12.9770823!4d77.5747472!15sChJNYWplc3RpYyBCdXMgU3RhbmRaFCISbWFqZXN0aWMgYnVzIHN0YW5kkgEIYnVzX3N0b3CaASNDaFpEU1VoTk1HOW5TMFZKUTBGblNVUlhNVXh1VFdaM0VBReABAA!16s%2Fg%2F11bxf9xy7b",
+        "admin_email": "nammavechicles@gmail.com",
+        "admin_password": "1141121"
+    }
+}

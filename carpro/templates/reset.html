@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Reset form</title>
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link href="/static/css/design.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+   <header class="header">
+      <a href="{{ url_for('home')}}" class="logo"> <span>Namma</span>Vehicles</a>
+
+   </header>
+
+   <div class="form-container">
+      <a href="{{ url_for('home')}}" class="logo">
+         <span id="close-Check-form" class="fas fa-times"></span></a>
+      <form action="{{ url_for('reset')}}" method="post">
+         <h3>Reset password</h3>
+         <label for="fname">Username:</label>
+         <input type="text" name="username" required placeholder="Enter your name">
+         <br>
+         <label for="fname">Email:</label>
+         <input type="email" name="email" required placeholder="Enter your email">
+         <br>
+         <label for="fname">Password:</label>
+         <div class="input-box">
+            <input type="password" name="password" required placeholder="Enter your password" id="password">
+            <img src="/static/img/eye-close.png" id="eyeicon">
+         </div>
+         <label for="fname">Confirm Password:</label>
+         <input class="pass" type="password" name="confirm" required placeholder="Confirm your password">
+         <br>
+         <select name="gender">
+            <option value="Male">male</option>
+            <option value="Female">female</option>
+         </select>
+         <br>
+         <input type="submit" name="submit" value="Reset" class="form-btn">
+         <br>
+      </form>
+      <script>
+         let eyeicon = document.getElementById("eyeicon");
+         let password = document.getElementById("password");
+   
+         eyeicon.onclick = function(){
+            if(password.type == "password" ){
+               password.type = "text";
+               eyeicon.src = "/static/img/eye-open.png";
+            }else{
+               password.type = "password";
+               eyeicon.src = "/static/img/eye-close.png";
+            }
+         }
+      </script>
+
+
+   </div>
+   {% with messages = get_flashed_messages() %}
+   {% if messages %}
+   <ul class="flashes">
+      {% for message in messages %}
+      <div class="msg">{{ message }}</div>
+      <a href="{{ url_for('register')}}" class="logo"> <span id="close-Check-form" class="fas fa-times"></span></a>
+   </ul>
+   {% endfor %}
+   {% endif %}
+   {% endwith %}
+</body>
+
+</html>

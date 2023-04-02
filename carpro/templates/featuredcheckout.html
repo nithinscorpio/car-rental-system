@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="/static/css/home.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="Check-form-container">
+    {% with messages = get_flashed_messages() %}
+   {% if messages %}
+   <ul class="flashe" id="colour">
+      {% for message in messages %}
+      <div class="msg">{{ message }}</div>
+      <a href="{{ url_for('vehiclescheckout')}}" class="close"> <span id="close-Check-form" class="fas fa-times"></span></a>
+   </ul>
+   {% endfor %}
+   {% endif %}
+   {% endwith %}
+    <a href="{{ url_for('featured')}}" class="logo"> <span id="close-Check-form" class="fas fa-times"></span></a>
+    <form action="{{ url_for('featuredcheckout')}}" method="post">
+      <h3>Booking</h3>
+      <div class="container-flex">
+        <div class="input-grid">
+          <div class="box">
+            <label>From:</label>
+            <input type="date" name="From" required placeholder="From-Date">
+          </div>
+          <div class="box">
+            <label>To:</label>
+            <input type="date" name="To" required placeholder="To-Date">
+          </div>
+          <div class="box">
+            <label>StartTime:</label>
+            <input type="time" name="Start" required placeholder="Start-time">
+          </div>
+          <div class="box">
+            <label>EndTime:</label>
+            <input type="time" name="End" required placeholder="End-time">
+          </div>
+          <div class="box">
+            <label>Email:</label>
+            <input type="email" name="email" required placeholder="email">
+          </div>
+          <div class="box">
+
+            <label for="fname">vechiles:</label>
+            <select name="user_type">
+              <option selected hidden value="">Select vehicles</option>
+              <option value="Audi R8">Audi R8</option>
+              <option value="Porsche 911">Porsche 911</option>
+              <option value="bmw z4">bmw z4</option>
+              <option value="Jaguar F-TYPE">Jaguar F-TYPE</option>
+              <option value="Mercedes-Benz GLA">Mercedes-Benz GLA</option>
+              <option value="Audi A4">Audi A4</option>
+              <option value="BMW X5">BMW X5</option>
+              <option value="Audi A6">Audi A6</option>
+            </select>
+
+          </div>
+          <h4 class="mb-3">Payment</h4>
+          <div class="paybox">
+            <div class="custom-control custom-radio">
+              <input id="Cash" name="paymentMethod" type="radio" value="Cash" class="custom-control-input" checked
+                required>
+              <label class="custom-control-label" for="credit">Cash</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input id="debit" name="paymentMethod" type="radio" value="Debit card" class="custom-control-input"
+                required>
+              <label class="custom-control-label" for="debit">Debit card</label>
+            </div>
+          </div>
+          <input type="submit" value="submit" class="btn">
+          <input type="reset" value="reset" class="btn">
+
+
+    </form>
+
+  </div>
+</body>
+
+</html>

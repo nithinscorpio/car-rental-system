@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="/static/css/home.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header class="header">
+
+
+        <a href="home.html" class="logo"> <span>Namma</span>Vehicles</a>
+
+        <nav class="navbar">
+            <Ul>
+                <Li><a href="{{ url_for('userlogin')}}">home</a></Li>
+                <Li><a href="{{ url_for('vehicles')}}">vehicles</a></Li>
+                <Li><a href="{{ url_for('featured')}}">featured</a></Li>
+                <Li><a href="{{ url_for('services')}}">services</a></Li>
+                <Li><a href="{{ url_for('reviews')}}">reviews</a></Li>
+                <Li><a href="{{ url_for('aboutus')}}">about</a></Li>
+                <Li><a href="{{ url_for('contact')}}">contact</a></Li>
+                <Li><a href="{{ url_for('checkout_json_data')}}">Bookings</a></Li>
+            </Ul>
+        </nav>
+        <div id="logout-btn">
+            <a href="{{ url_for('logout')}}">
+                <button id="logout" class="btn">logout</button></a>
+            <i class="far fa-user"></i>
+        </div>
+        <div class="right">
+            <img src="/static/img/profile.png" alt="">
+            <div>
+                <h3>{{logged_in_user}}</h3>
+            </div>
+        </div>
+    </header>
+    </section>
+
+    <section class="services" id="services">
+
+        <h1 class="heading"> our <span>services</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-car"></i>
+                <h3>car renting</h3>
+                <p>car which you desire is given rented for specified period</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-tools"></i>
+                <h3>parts repair</h3>
+                <p>the repairing of damaged parts of the vehicle can be done</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-car-crash"></i>
+                <h3>car insurance</h3>
+                <p>car insurance will be provided as an agreement for security purpose</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-car-battery"></i>
+                <h3>battery checking</h3>
+                <p>vehicles battery is checked for the good working of the engine</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-gas-pump"></i>
+                <h3>oil change</h3>
+                <p>vehicles oil can be refilled or changed as required</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-gas-pump"></i>
+                <h3>petrol</h3>
+                <p>limited petrol (upto 100KM free petrol)</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 support</h3>
+                <p>costumers can contact us anytime for queries</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-car"></i>
+                <h3>car wash</h3>
+                <p>free car washing</p>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="footer" id="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>our location</h3>
+                <a href="{{params['mysore_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Mysore Road
+                </a>
+                <a href="{{params['Koramangala_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i>
+                    Koramangala </a>
+                <a href="{{params['Yeswanthpur_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i>
+                    Yeswanthpur </a>
+                <a href="{{params['Kalasipalya_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i>
+                    Kalasipalya </a>
+                <a href="{{params['Majestic_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Majestic
+                </a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="{{ url_for('userlogin')}}"> <i class="fas fa-arrow-right"></i> home </a>
+                <a href="{{ url_for('vehicles')}}"> <i class="fas fa-arrow-right"></i> vehicles </a>
+                <a href="{{ url_for('featured')}}"> <i class="fas fa-arrow-right"></i> featured </a>
+                <a href="{{ url_for('services')}}"> <i class="fas fa-arrow-right"></i> services </a>
+                <a href="{{ url_for('reviews')}}"> <i class="fas fa-arrow-right"></i> reviews </a>
+                <a href="{{ url_for('aboutus')}}"> <i class="fas fa-arrow-right"></i>About </a>
+                <a href="{{ url_for('contact')}}"> <i class="fas fa-arrow-right"></i> contact </a>
+                <a href="{{ url_for('checkout_json_data')}}"> <i class="fas fa-arrow-right"></i>Bookings </a>
+            </div>
+
+            <div class="box">
+                <h3>Customer Support</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +85490-84770 </a>
+                <a href="#"> <i class="fas fa-phone"></i> +96202-11275 </a>
+                <a href="mailto:Nammavehicles@gmail.com"> <i class="fas fa-envelope"></i> Nammavehicles@gmail.com </a>
+                <a href="{{params['Bangalore_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Bangalore india - 560040 </a>
+            </div>
+
+            <div class="box">
+                <h3>Explore Us</h3>
+                <a href="{{params['fb_url']}}" target="_blank"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="{{params['tw_url']}}" target="_blank"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="{{params['in_url']}}" target="_blank"> <i class="fab fa-instagram"></i> instagram </a>
+            </div>
+
+        </div>
+
+        <div class="credit"> created by Nithin and Akanksha </div>
+
+    </section>
+</body>
+
+</html>

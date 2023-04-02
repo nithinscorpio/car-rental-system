@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="/static/css/home.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header class="header">
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <a href="{{ url_for('home')}}" class="logo"> <span>Namma</span>Vehicles</a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ url_for('admin')}}">Admin</a></li>
+                <li> <a href="{{ url_for('home')}}">home</a></li>
+                <li> <a href="{{ url_for('homecontact')}}">contact</a></li>
+                <li> <a href="{{ url_for('homeabout')}}">about</a></li>
+            </ul>
+        </nav>
+        </nav>
+        <div id="login-btn">
+            <a href="{{ url_for('login')}}">
+                <button id="login" class="btn">login</button></a>
+            <i class="far fa-user"></i>
+        </div>
+        <div id="register-btn">
+            <a href="{{ url_for('register')}}">
+                <button id="register" class="btn">Register</button></a>
+            <i class="far fa-user"></i>
+        </div>
+        </header>
+    <section class="contact" id="contact">
+
+        <h1 class="heading"><span>contact</span> us</h1>
+
+        <div class="row">
+
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.2273023550156!2d77.52614731432472!3d13.021192217312406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d101aa3dd9b%3A0xad90aa0c15b255b6!2sSurana%20College%20Peenya%20Campus!5e0!3m2!1sen!2sin!4v1672150655900!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">"
+            </iframe>
+
+            <form action="{{ url_for('homecontact')}}" method="post">
+                <h3>get in touch</h3>
+                <input type="text" name="name" placeholder="your name" class="box">
+                <input type="email" name="email" required placeholder="your email" class="box">
+                <input type="text" name="subject" placeholder="subject" class="box">
+                <textarea name="message" placeholder="your message" class="box" cols="30" rows="10"></textarea>
+                <input type="submit" value="send message" class="btn">
+            </form>
+
+        </div>
+
+    </section>
+    <section class="footer" id="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>our location</h3>
+                <a href="{{params['mysore_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Mysore Road </a>
+                <a href="{{params['Koramangala_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Koramangala </a>
+                <a href="{{params['Yeswanthpur_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Yeswanthpur </a>
+                <a href="{{params['Kalasipalya_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Kalasipalya </a>
+                <a href="{{params['Majestic_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Majestic </a>
+            </div>
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="{{ url_for('home')}}"> <i class="fas fa-arrow-right"></i> home </a>
+                <a href="{{ url_for('homecontact')}}"> <i class="fas fa-arrow-right"></i> contact </a>
+                <a href="{{ url_for('homeabout')}}"> <i class="fas fa-arrow-right"></i> About</a>
+            </div>
+
+
+            <div class="box">
+                <h3>Customer Support</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +85490-84770 </a>
+                <a href="#"> <i class="fas fa-phone"></i> +96202-11275 </a>
+                <a href="mailto:Nammavehicles@gmail.com"> <i class="fas fa-envelope"></i> Nammavehicles@gmail.com </a>
+                <a href="{{params['Bangalore_url']}}" target="_blank"> <i class="fas fa-map-marker-alt"></i> Bangalore india - 560040 </a>
+            </div>
+
+            <div class="box">
+                <h3>Explore Us</h3>
+                <a href="{{params['fb_url']}}" target="_blank"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="{{params['tw_url']}}" target="_blank"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="{{params['in_url']}}" target="_blank"> <i class="fab fa-instagram"></i> instagram </a>
+            </div>
+
+        </div>
+
+        <div class="credit"> created by Nithin and Akanksha  </div>
+
+    </section>
+</body>
+
+</html>

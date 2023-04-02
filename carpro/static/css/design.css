@@ -1,0 +1,257 @@
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none
+   ;
+}
+:root{
+   --crimson:crimson;
+   --light-crimson:#fbd0d9;
+   --black:#dad9e3;
+   --light-color:#666;
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+   --border:.1rem solid rgba(0,0,0,.1);
+}
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-padding-top: 7rem;
+   scroll-behavior: smooth;
+}
+.container .logo{
+   
+   font-size: 2.5rem;
+   color:var(--black);
+   font-weight: bold;
+}
+.container .edit{
+   margin-bottom: 50%;
+   margin-right: 50%;
+}
+.container .edit span{
+   color:crimson ;
+}
+
+.header .logo img{
+   width: 27px;
+}
+.header .logo span{
+   color:var(--crimson);
+}
+.header {
+   align-items: center;
+   justify-content: space-between;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   /* padding: 2%; */
+   z-index: 1000;
+   background: rgb(51, 51, 51);
+}
+.header .logo{
+   font-size: 2.5rem;
+   color:var(--black);
+   font-weight: bold;
+}
+.container{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:20px;
+   padding-bottom: 60px;
+   padding-right: 0%;
+   background-image: url("../img/cars.png");
+   background-repeat: no-repeat;
+   background-size: 1400px 750px;
+   
+}
+   
+
+.container .content{
+   text-align: center;
+
+}
+.container .edit{
+   text-align: right;
+
+}
+
+.container .content h5{
+   font-size: 30px;
+   color:rgb(227, 248, 246);
+}
+
+.container .content h5 span{
+   background: crimson;
+   color:#fff;
+   border-radius: 5px;
+   padding:0 15px;
+}
+
+.container .content h1{
+   font-size: 50px;
+   color:rgb(253, 255, 255);
+}
+
+.container .content h1 span{
+   color:crimson;
+}
+
+.container .content h4{
+   font-size: 25px;
+   color:rgb(184, 203, 201);
+   margin-bottom: 20px;
+}
+
+.container .content .btn{
+   display: inline-block;
+   padding:10px 30px;
+   font-size: 20px;
+   background: #333;
+   color:#fff;
+   margin:0 5px;
+   text-transform: capitalize;
+}
+
+.container .content .btn:hover{
+   background: crimson;
+}
+
+.form-container{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:20px;
+   padding-bottom: 60px;
+   background: #eee;
+}
+
+.form-container form{
+   padding:20px;
+   border-radius: 5px;
+   box-shadow: 0 5px 10px rgba(0,0,0,.1);
+   background: #fff;
+   text-align: left;
+   width: 500px;
+}
+
+.form-container form h3{
+   font-size: 30px;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+   color:#333;
+}
+
+.form-container form input,
+.form-container form select{
+   width: 100%;
+   padding:10px 15px;
+   font-size: 17px;
+   margin:8px 0;
+   background: #eee;
+   border-radius: 5px;
+}
+
+.form-container form select option{
+   background: #fff;
+}
+
+.form-container form .form-btn{
+   background: #fbd0d9;
+   color:crimson;
+   text-transform: capitalize;
+   font-size: 20px;
+   cursor: pointer;
+}
+
+.form-container form .form-btn:hover{
+   background: crimson;
+   color:#fff;
+}
+
+.form-container form p{
+   margin-top: 10px;
+   font-size: 20px;
+   color:#333;
+}
+
+.form-container form p a{
+   color:crimson;
+}
+
+.form-container form .error-msg{
+   margin:10px 0;
+   display: block;
+   background: crimson;
+   color:#fff;
+   border-radius: 5px;
+   font-size: 20px;
+   padding:10px;
+}
+.flashes{
+   background-color:#fbd0d9;
+   padding: 20px 40px;
+   min-width: 420px;
+   position: absolute;
+   right:0px;
+   bottom:85%;
+   border-radius: 4px;
+
+
+}
+.flashes .msg{
+   padding: 0 20px;
+   font-size: 18px;
+   color: crimson;
+}
+.lflashes{
+   background-color:lightgreen;
+   padding: 20px 40px;
+   min-width: 420px;
+   position: absolute;
+   right:0px;
+   bottom:85%;
+   border-radius: 4px;
+}
+
+
+.lflashes .msg{
+   padding: 0 20px;
+   font-size: 18px;
+   color: black;
+}
+.flashes #close-Check-form{
+   position: absolute;
+   top:0%; right:15%;
+   font-size: 3rem;;
+   cursor: pointer;
+}
+.lflashes #close-Check-form{
+   position: absolute;
+   top:0%; right:15%;
+   font-size: 3rem;;
+   cursor: pointer;
+}
+.form-container #close-Check-form{
+   position: absolute;
+   bottom: 84%; right:2.5rem;
+   font-size: 5rem;
+   color:black;
+   cursor: pointer;
+}
+.input-box{
+   border-radius: 5px;
+   margin: 3px auto;
+   display: flex;
+   align-items: center;
+}
+
+.input-box img{
+   width: 25px;
+   cursor: pointer;
+}
